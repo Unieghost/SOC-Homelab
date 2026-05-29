@@ -149,6 +149,7 @@ Important points:
 - Detection Type: Lateral Movement
 
 Screenshot:
+
 ![Discord Alert](screenshots/05-discord-alert-100550.png)
 
 
