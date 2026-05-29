@@ -149,8 +149,8 @@ Important points:
 - Detection Type: Lateral Movement
 
 **Evidence Screenshot**
-![Discord Alert](screenshots/05-discord-alert-100550.png)
 
+![Discord Alert](screenshots/05-discord-alert-100550.png)
 
 ## Analysis
 
@@ -331,8 +331,8 @@ Comando usado para simular o ataque:
 
 PsExec.exe\WIN-LTSC1 cmd
 
-Captura de tela:
-01-psexec-command.png
+**Captura de tela:**
+![PsExec Execution](screenshots/01-psexec-execution.png)
 
 ---
 
@@ -345,8 +345,8 @@ Destaques das evidências:
 - Processo pai: PsExec.exe
 - Processo filho: cmd.exe
 
-Captura de tela:
-02-sysmon-psexec-detection.png
+**Captura de tela:**
+![Sysmon Detection](screenshots/02-sysmon-psexec-detection.png)
 
 ---
 
@@ -359,8 +359,8 @@ Destaques das evidências:
 - ID da regra: 92052
 - Descrição: prompt de comando do Windows iniciado por um processo anormal
 
-Captura de tela:
-03-wazuh-alert-psexec.png
+**Captura de tela:**
+![Wazuh Alert](screenshots/03-wazuh-alert-psexec.png)
 
 ---
 
@@ -375,8 +375,8 @@ Elementos vistos:
 - Linha do tempo
 - Atividade do anfitrião
 
-Captura de tela:
-04-mitre-dashboard.png
+**Captura de tela:**
+![MITRE Dashboard](screenshots/04-mitre-dashboard.png)
 
 ---
 
@@ -390,8 +390,9 @@ Pontos importantes:
 - Nível de alerta: 12
 Tipo de detecção: movimento lateral
 
-Captura de tela:
-05-discord-alert-psexec.png
+**Captura de tela:**
+
+![Discord Alert](screenshots/05-discord-alert-100550.png)
 
 
 ## Análise
