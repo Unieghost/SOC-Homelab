@@ -90,7 +90,7 @@ Command used to simulate the attack:
 PsExec.exe \\WIN-LTSC1 cmd
 
 Screenshot:
-01-psexec-command.png
+![PsExec Execution](screenshots/01-psexec-execution.png)
 
 ---
 
@@ -104,7 +104,7 @@ Evidence highlights:
 - Child Process: cmd.exe
 
 Screenshot:
-02-sysmon-psexec-detection.png
+![Sysmon Detection](screenshots/02-sysmon-psexec-detection.png)
 
 ---
 
@@ -118,7 +118,7 @@ Evidence highlights:
 - Description: Windows command prompt started by an abnormal process
 
 Screenshot:
-03-wazuh-alert-psexec.png
+![Wazuh Alert](screenshots/03-wazuh-alert-psexec.png)
 
 ---
 
@@ -134,7 +134,7 @@ Elements seen:
 - Host activity
 
 Screenshot:
-04-mitre-dashboard.png
+![MITRE Dashboard](screenshots/04-mitre-dashboard.png)
 
 ---
 
@@ -149,7 +149,7 @@ Important points:
 - Detection Type: Lateral Movement
 
 Screenshot:
-05-discord-alert-psexec.png
+![Discord Alert](screenshots/05-discord-alert-100550.png)
 
 
 ## Analysis
