@@ -238,7 +238,7 @@ Comando usado para simular o ataque:
 
 runas /usuário:LAB\Administrador cmd
 
-Captura de tela:
+Imagem:
 
 ![Simulação de força bruta](screenshots/01-bruteforce-simulation.png)
 
