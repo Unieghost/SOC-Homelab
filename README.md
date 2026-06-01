@@ -33,30 +33,54 @@ Personal Security Operations Center (SOC) laboratory focused on:
 
 # Incident Reports
 
-## Incident 001 – PsExec Lateral Movement Simulation
 
-A simulated lateral movement attack using PsExec was executed in a controlled environment.
+### Incident 001 – PsExec Lateral Movement Detection
 
-The activity was detected through Sysmon telemetry, correlated by Wazuh, mapped to MITRE ATT&CK techniques and forwarded through Discord integration.
+Description:
 
-📄 Report:
+Simulation of lateral movement using PsExec between Windows hosts.
 
-[Incident-001-PsExec](Incident-001-PsExec/Incident-001-PsExec.md)
+Skills demonstrated:
 
----
+- Sysmon telemetry analysis
+- Wazuh custom rule creation
+- MITRE ATT&CK mapping
+- Discord alert integration
+- Incident investigation
 
-## Skills Demonstrated
+Techniques:
 
-- Windows Event Analysis
-- Sysmon Monitoring
-- Wazuh SIEM
-- Detection Engineering
-- MITRE ATT&CK Mapping
-- Incident Documentation
-- Active Directory Monitoring
-- Alert Triage
+- T1059.003 Windows Command Shell
 
----
+Report:
+
+Incident-001-PsExec/Incident-001-PsExec.md
+
+--------------------------------------------------
+
+### Incident 002 – Brute Force Attack Detection
+
+Description:
+
+Simulation of repeated failed authentication attempts against a privileged account.
+
+Skills demonstrated:
+
+- Windows Security Log analysis
+- Event ID 4625 investigation
+- Wazuh correlation rules
+- MITRE ATT&CK mapping
+- Alert validation
+
+Techniques:
+
+- T1110 Brute Force
+
+Report:
+
+Incident-002-BruteForce/Incident-002-BruteForce.md
+
+--------------------------------------------------
 
 ## Future Incident Reports
 
