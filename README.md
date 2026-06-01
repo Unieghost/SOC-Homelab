@@ -60,7 +60,6 @@ The activity was detected through Sysmon telemetry, correlated by Wazuh, mapped 
 
 ## Future Incident Reports
 
-- Incident 002 – Brute Force Detection
 - Incident 003 – Privilege Escalation
 - Incident 004 – PowerShell Abuse
 - Incident 005 – Active Directory Enumeration
