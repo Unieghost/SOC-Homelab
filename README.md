@@ -54,7 +54,7 @@ Techniques:
 
 Report:
 
-Incident-001-PsExec/Incident-001-PsExec.md
+[Incident-001-PsExec](Incident-001-PsExec/Incident-001-PsExec.md)
 
 --------------------------------------------------
 
@@ -78,7 +78,7 @@ Techniques:
 
 Report:
 
-Incident-002-BruteForce/Incident-002-BruteForce.md
+[Incident-002-BruteForce](Incident-002-BruteForce/Incident-002-BruteForce.md)
 
 --------------------------------------------------
 
