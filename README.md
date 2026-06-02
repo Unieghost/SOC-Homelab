@@ -95,10 +95,10 @@ Report:
 
 ## Future Incident Reports
 
--Incident 004 - User Account Creation Detection (4720)
--Incident 005 - Privileged Group Membership Change (4728)
--Incident 006 - Scheduled Task Persistence (T1053)
--Incident 007 - Registry Modification (T1112)
--Incident 008 - Service Creation Detection (T1543)
--Incident 009 - RDP Logon Monitoring (4624 Type 10)
--Incident 010 - PowerShell Download Cradle
+- Incident 004 - User Account Creation Detection (4720)
+- Incident 005 - Privileged Group Membership Change (4728)
+- Incident 006 - Scheduled Task Persistence (T1053)
+- Incident 007 - Registry Modification (T1112)
+- Incident 008 - Service Creation Detection (T1543)
+- Incident 009 - RDP Logon Monitoring (4624 Type 10)
+- Incident 010 - PowerShell Download Cradle
