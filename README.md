@@ -82,8 +82,23 @@ Report:
 
 --------------------------------------------------
 
+### Incident 003 - Detection of PowerShell Encoded Command Execution
+
+- Technique: PowerShell
+- MITRE ATT&CK: T1059.001
+- Detection: Wazuh + Sysmon
+- Alerting: Discord Integration
+
+[View Report](Incident-003-PowerShell-Encoded/Incident-003-PowerShell-Encoded.md)
+
+--------------------------------------------------
+
 ## Future Incident Reports
 
-- Incident 003 – Privilege Escalation
-- Incident 004 – PowerShell Abuse
-- Incident 005 – Active Directory Enumeration
+-Incident 004 - User Account Creation Detection (4720)
+-Incident 005 - Privileged Group Membership Change (4728)
+-Incident 006 - Scheduled Task Persistence (T1053)
+-Incident 007 - Registry Modification (T1112)
+-Incident 008 - Service Creation Detection (T1543)
+-Incident 009 - RDP Logon Monitoring (4624 Type 10)
+-Incident 010 - PowerShell Download Cradle
