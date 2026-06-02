@@ -84,10 +84,24 @@ Report:
 
 ### Incident 003 - Detection of PowerShell Encoded Command Execution
 
-- Technique: PowerShell
-- MITRE ATT&CK: T1059.001
-- Detection: Wazuh + Sysmon
-- Alerting: Discord Integration
+Description:
+
+Simulation of a PowerShell command executed through the EncodedCommand parameter using a Base64-encoded payload.
+
+Skills demonstrated:
+
+PowerShell monitoring
+Sysmon Event ID 1 analysis
+Wazuh alert investigation
+MITRE ATT&CK mapping
+Dashboard correlation
+Discord alert validation
+
+Techniques:
+
+T1059.001 PowerShell
+
+Report:
 
 [Incident-003-PowerShell-Encoded](Incident-003-PowerShell-Encoded/Incident-003-PowerShell-Encoded.md)
 
