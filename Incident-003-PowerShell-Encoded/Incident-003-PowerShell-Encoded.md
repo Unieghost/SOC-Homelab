@@ -47,9 +47,14 @@ The aim of the exercise was to test and validate PowerShell detection and encode
 
 The following encoded PowerShell command was run:
 
-powershell.exe -EncodedCommand VwByAGkAdABlAC0ATwB1AHQAcAB1AHQAIAAiAFMATwBDACAATABhAGIAIABQAG8AdwBlAHIAUwBoAGUAbABsACAAZQBuAGMAbwBkAGUAZAAgAGMAbwBtAG0AYQBuAGQAIAB0AGUAcwB0ACIA
+```powershell
+$cmd = 'Write-Output "SOC Lab PowerShell encoded command test"'
+$bytes = [System.Text.Encoding]::Unicode.GetBytes($cmd)
+$encoded = [Convert]::ToBase64String($bytes)
 
-The encoded command had a Base64 encoded payload that was ran for simulation purposes to detect a commonly used malicious behavior.
+powershell.exe -EncodedCommand $encoded
+
+The encoded command contained a Base64-encoded payload that was executed for simulation purposes to emulate a commonly observed malicious technique.
 
 The objective of the exercise was to detect and validate encoded PowerShell command execution.
 
@@ -61,7 +66,7 @@ Encoded PowerShell command executed from the workstation.
 
 Image:
 
-![Encoded PowerShell Execution](screenshots/01-encoded-command-execution.png)
+[PowerShell Encoded Command](screenshots/01-powershell-encoded-command.png)
 
 ### Evidence 2 – Wazuh Detection
 
@@ -69,7 +74,7 @@ Wazuh detected execution of a Base64 encoded PowerShell command and triggered Ru
 
 Image:
 
-![Wazuh Detection](screenshots/02-wazuh-alert-92057.png)
+![Wazuh Rule 92057](screenshots/02-wazuh-rule-92057.png)
 
 ### Evidence 3 – Sysmon Event Collection
 
@@ -77,7 +82,7 @@ Sysmon Event ID 1 recorded the PowerShell process creation event and captured th
 
 Image:
 
-![Sysmon Event](screenshots/03-sysmon-event-92057.png)
+![Event Details Encoded Command](screenshots/03-event-details-encoded-command.png)
 
 ### Evidence 4 – Discord Alert
 
@@ -85,7 +90,7 @@ The Wazuh Discord integration successfully delivered an alert notification.
 
 Image:
 
-![Discord Alert](screenshots/04-discord-alert-92057.png)
+![Discord Alert 92057](screenshots/04-discord-alert-92057.png)
 
 ### Evidence 5 – Dashboard Correlation
 
@@ -93,15 +98,15 @@ A dedicated dashboard displayed the detected activity, MITRE ATT&CK mapping, hos
 
 Image:
 
-![PowerShell Dashboard](screenshots/05-powershell-dashboard.png)
+![MITRE PowerShell Dashboard](screenshots/05-mitre-powershell-dashboard.png)
 
 ## Analysis
 
-The above activity can be seen to indicate the execution of a PowerShell command with the EncodedCommand parameter.
+The observed activity indicates the execution of a PowerShell command using the EncodedCommand parameter.
 
 Encoding of malicious commands in Base64 format is one of the most widely used techniques by attackers for obfuscation purposes.
 
-The command in question resulted in generation of Sysmon process creation event that was collected and analyzed by Wazuh.
+The command resulted in the generation of a Sysmon process creation event, which was subsequently collected and analyzed by Wazuh.
 
 While the command used in this case was benign, encoding of PowerShell commands is often indicative of:
 
@@ -109,7 +114,7 @@ While the command used in this case was benign, encoding of PowerShell commands 
 - Post-exploitation activities
 - Abuse of PowerShell
 - Defense evasion methods
-- LoT attack techniques
+- Living-off-the-Land (LotL) techniques
 
 Execution of encoded PowerShell commands needs investigation in a real-world scenario to assess whether the action is legitimate or not.
 
@@ -132,7 +137,7 @@ Important indicators include:
 
 18:48:20 UTC - Rule 92057 triggered.
 
-18:48:20 UTC - MITRE ATT&CK attack mapped.
+18:48:20 UTC - MITRE ATT&CK technique mapped.
 
 18:48:21 UTC - Discord alert message received.
 
@@ -183,4 +188,4 @@ The lab showed:
 - Data visualization on the dashboard
 - Alerting on Discord
 
-In conclusion, SOC laboratory demonstrated its capability to detect and respond to encoded command execution PowerShell activity.
+In conclusion, the SOC laboratory demonstrated its capability to detect, correlate, and respond to PowerShell encoded command execution activity.
