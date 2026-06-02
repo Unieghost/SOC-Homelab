@@ -45,7 +45,7 @@ The aim of the exercise was to test and validate PowerShell detection and encode
 
 ## Attack Simulation
 
-The following encoded PowerShell command was run:
+The following PowerShell commands were executed to generate and run a Base64-encoded command:
 
 ```powershell
 $cmd = 'Write-Output "SOC Lab PowerShell encoded command test"'
@@ -53,6 +53,7 @@ $bytes = [System.Text.Encoding]::Unicode.GetBytes($cmd)
 $encoded = [Convert]::ToBase64String($bytes)
 
 powershell.exe -EncodedCommand $encoded
+```
 
 The encoded command contained a Base64-encoded payload that was executed for simulation purposes to emulate a commonly observed malicious technique.
 
