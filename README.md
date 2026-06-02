@@ -89,7 +89,7 @@ Report:
 - Detection: Wazuh + Sysmon
 - Alerting: Discord Integration
 
-[View Report](Incident-003-PowerShell-Encoded/Incident-003-PowerShell-Encoded.md)
+[Incident-003-PowerShell-Encoded](Incident-003-PowerShell-Encoded/Incident-003-PowerShell-Encoded.md)
 
 --------------------------------------------------
 
