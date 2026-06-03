@@ -47,14 +47,14 @@ The aim of the exercise was to test and validate privileged group membership mon
 
 ## Attack Simulation
 
-The following command was executed:
+The following commands were executed:
 
 ```cmd
 net user soc_test01 Password123! /add /domain
 net group "Domain Admins" soc_test01 /add /domain
 ```
 
-The command added a user account to the Domain Admins group.
+The commands added a user account and also changed to the Domain Admins group.
 
 The objective of the exercise was to detect and validate privileged group membership changes and verify whether security monitoring controls would identify the activity.
 
