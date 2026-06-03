@@ -126,7 +126,7 @@ Techniques:
 - T1098 Account Manipulation
 
 
-[Incident-004-User-Account-Creation-Detection](ncident-004-User-Account-Creation-Detection/ncident-004-User-Account-Creation-Detection.md)
+[Incident-004-User-Account-Creation-Detection](ncident-004-User-Account-Creation-Detection/Incident-004-User-Account-Creation-Detection.md)
 
 ## Future Incident Reports
 
