@@ -90,16 +90,16 @@ Simulation of a PowerShell command executed through the EncodedCommand parameter
 
 Skills demonstrated:
 
-PowerShell monitoring
-Sysmon Event ID 1 analysis
-Wazuh alert investigation
-MITRE ATT&CK mapping
-Dashboard correlation
-Discord alert validation
+- PowerShell monitoring
+- Sysmon Event ID 1 analysis
+- Wazuh alert investigation
+- MITRE ATT&CK mapping
+- Dashboard correlation
+- Discord alert validation
 
 Techniques:
 
-T1059.001 PowerShell
+- T1059.001 PowerShell
 
 Report:
 
@@ -107,9 +107,29 @@ Report:
 
 --------------------------------------------------
 
+### Incident 004 – User Account Creation Detection
+
+Description:
+
+Simulation of a new domain user account being created and detected through Windows Security Event logs.
+
+Skills demonstrated:
+
+- Windows Security Monitoring
+- User Account Auditing
+- Event ID 4720 Investigation
+- Wazuh Alert Analysis
+- MITRE ATT&CK Mapping
+
+Techniques:
+
+- T1098 Account Manipulation
+
+
+[Incident-004-User-Account-Creation-Detection](ncident-004-User-Account-Creation-Detection/ncident-004-User-Account-Creation-Detection.md)
+
 ## Future Incident Reports
 
-- Incident 004 - User Account Creation Detection (4720)
 - Incident 005 - Privileged Group Membership Change (4728)
 - Incident 006 - Scheduled Task Persistence (T1053)
 - Incident 007 - Registry Modification (T1112)
