@@ -128,9 +128,33 @@ Techniques:
 
 [Incident-004-User-Account-Creation-Detection](Incident-004-User-Account-Creation-Detection/Incident-004-User-Account-Creation-Detection.md)
 
+--------------------------------------------------
+
+### Incident 005 – Privileged Group Membership Change
+
+Description:
+
+Simulation of a user being added to the Domain Admins group within an Active Directory environment.
+
+Skills demonstrated:
+
+- Active Directory Security Monitoring
+- Privileged Group Auditing
+- Windows Security Log Analysis
+- Event ID 4728 Investigation
+- Wazuh Alert Correlation
+- MITRE ATT&CK Mapping
+- Discord Alert Validation
+
+Techniques:
+
+- T1484 Domain Policy Modification
+
+--------------------------------------------------
+
+
 ## Future Incident Reports
 
-- Incident 005 - Privileged Group Membership Change (4728)
 - Incident 006 - Scheduled Task Persistence (T1053)
 - Incident 007 - Registry Modification (T1112)
 - Incident 008 - Service Creation Detection (T1543)
