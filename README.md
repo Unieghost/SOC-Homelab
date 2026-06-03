@@ -150,6 +150,8 @@ Techniques:
 
 - T1484 Domain Policy Modification
 
+[Incident-005-Privileged Group-Membership-Change](Incident-005-Privileged Group-Membership-Change/Incident-005-Privileged Group-Membership-Change.md)
+
 --------------------------------------------------
 
 
