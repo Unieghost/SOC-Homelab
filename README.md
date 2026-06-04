@@ -233,6 +233,34 @@ Report:
 
 --------------------------------------------------
 
+### Incident 009 – PowerShell Download Cradle
+
+Description:
+
+Simulation of a PowerShell Download Cradle technique used to retrieve remote content from an external source through PowerShell and .NET WebClient functionality.
+
+Skills demonstrated:
+
+-PowerShell Analysis
+- Sysmon Event ID 1 Investigation
+- Command-Line Analysis
+- Wazuh Alert Investigation
+- Threat Hunting
+- Discord Alert Validation
+- MITRE ATT&CK Mapping
+- Windows Endpoint Monitoring
+
+Techniques:
+
+-T1059.001 PowerShell
+-T1105 Ingress Tool Transfer
+
+Report:
+
+[Incident 009 – PowerShell Download Cradle](./Incident-009-PowerShell-Download-Cradle/Incident-009-PowerShell-Download-Cradle.md)
+
+--------------------------------------------------
+
 ## Future Incident Reports
 
-- Incident 010 - PowerShell Download Cradle
+- Incident 010 – Nmap Network Scan Detection
