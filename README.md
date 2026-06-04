@@ -54,7 +54,7 @@ Techniques:
 
 Report:
 
-[Incident-001-PsExec](Incident-001-PsExec/Incident-001-PsExec.md)
+[Incident 001 - PsExec](Incident-001-PsExec/Incident-001-PsExec.md)
 
 --------------------------------------------------
 
@@ -78,7 +78,7 @@ Techniques:
 
 Report:
 
-[Incident-002-BruteForce](Incident-002-BruteForce/Incident-002-BruteForce.md)
+[Incident 002 - BruteForce](Incident-002-BruteForce/Incident-002-BruteForce.md)
 
 --------------------------------------------------
 
@@ -103,7 +103,7 @@ Techniques:
 
 Report:
 
-[Incident-003-PowerShell-Encoded](Incident-003-PowerShell-Encoded/Incident-003-PowerShell-Encoded.md)
+[Incident 003 - PowerShell Encoded](Incident-003-PowerShell-Encoded/Incident-003-PowerShell-Encoded.md)
 
 --------------------------------------------------
 
@@ -126,7 +126,7 @@ Techniques:
 - T1098 Account Manipulation
 
 
-[Incident-004-User-Account-Creation-Detection](Incident-004-User-Account-Creation-Detection/Incident-004-User-Account-Creation-Detection.md)
+[Incident 004 - User Account Creation Detection](Incident-004-User-Account-Creation-Detection/Incident-004-User-Account-Creation-Detection.md)
 
 --------------------------------------------------
 
@@ -150,7 +150,7 @@ Techniques:
 
 - T1484 Domain Policy Modification
 
-[Incident-005-Privileged-Group-Membership-Change](Incident-005-Privileged-Group-Membership-Change/Incident-005-Privileged-Group-Membership-Change.md)
+[Incident 005 - Privileged Group Membership Change](Incident-005-Privileged-Group-Membership-Change/Incident-005-Privileged-Group-Membership-Change.md)
 
 --------------------------------------------------
 
