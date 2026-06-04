@@ -176,7 +176,7 @@ Techniques:
 
 Report:
 
-[Incident 006 – Scheduled Task Persistence Detection](./Incident-006-Scheduled-Task-Persistence/Incident-006-Scheduled-Task-Persistence.md)
+[Incident 006 - Scheduled Task Persistence Detection](./Incident-006-Scheduled-Task-Persistence/Incident-006-Scheduled-Task-Persistence.md)
 
 --------------------------------------------------
 
@@ -202,7 +202,7 @@ Techniques:
 
 Report:
 
-[Incident 007 – Registry Modification Detection](./Incident-007-Registry-Modification/Incident-007-Registry-Modification.md)
+[Incident 007 - Registry Modification Detection](./Incident-007-Registry-Modification/Incident-007-Registry-Modification.md)
 
 --------------------------------------------------
 
@@ -229,7 +229,7 @@ Techniques:
 
 Report:
 
-[Incident 008 – Service Creation Detection](./Incident-008-Service-Creation-Detection/Incident-008-Service-Creation-Detection.md)
+[Incident 008 - Service Creation Detection](./Incident-008-Service-Creation-Detection/Incident-008-Service-Creation-Detection.md)
 
 --------------------------------------------------
 
