@@ -60,7 +60,7 @@ The command creates a .NET WebClient object and downloads remote content directl
 
 The Download Cradle command was executed successfully from PowerShell.
 
-![Evidence 01](images/01-powershell-download-cradle-command.png)
+![01-powershell-download-cradle-command](screenshots/01-powershell-download-cradle-command.png)
 
 ### Result
 
