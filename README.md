@@ -235,5 +235,4 @@ Report:
 
 ## Future Incident Reports
 
-- Incident 009 - RDP Logon Monitoring (4624 Type 10)
 - Incident 010 - PowerShell Download Cradle
