@@ -178,10 +178,36 @@ Report:
 
 [Incident 006 – Scheduled Task Persistence Detection](./Incident-006-Scheduled-Task-Persistence/Incident-006-Scheduled-Task-Persistence.md)
 
+--------------------------------------------------
+
+### Incident 007 – Registry Modification Detection
+
+Description:
+
+Simulation of registry modification activity through the creation of a Windows Run Key persistence mechanism.
+
+Skills demonstrated:
+
+- Windows Registry analysis
+- Sysmon Event ID 13 investigation
+- Persistence detection
+- Wazuh alert investigation
+- MITRE ATT&CK mapping
+- Discord alert validation
+- Threat Hunting
+
+Techniques:
+
+- T1547.001 Registry Run Keys / Startup Folder
+
+Report:
+
+[Incident 007 – Registry Modification Detection](./Incident-007-Registry-Modification/Incident-007-Registry-Modification.md)
+
+--------------------------------------------------
 
 ## Future Incident Reports
 
-- Incident 007 - Registry Modification (T1112)
 - Incident 008 - Service Creation Detection (T1543)
 - Incident 009 - RDP Logon Monitoring (4624 Type 10)
 - Incident 010 - PowerShell Download Cradle
