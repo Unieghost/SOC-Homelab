@@ -154,10 +154,33 @@ Techniques:
 
 --------------------------------------------------
 
+### Incident 006 – Scheduled Task Persistence Detection
+
+Description:
+
+Simulation of a persistence technique through the creation of a scheduled task configured to execute at user logon.
+
+Skills demonstrated:
+
+- Windows Security Log analysis
+- Event ID 4698 investigation
+- Scheduled Task monitoring
+- Wazuh alert investigation
+- MITRE ATT&CK mapping
+- Threat Hunting validation
+- Audit policy troubleshooting
+
+Techniques:
+
+- T1053 Scheduled Task/Job
+
+Report:
+
+[Incident 006 – Scheduled Task Persistence Detection](./Incident-006-Scheduled-Task-Persistence/Incident-006-Scheduled-Task-Persistence.md)
+
 
 ## Future Incident Reports
 
-- Incident 006 - Scheduled Task Persistence (T1053)
 - Incident 007 - Registry Modification (T1112)
 - Incident 008 - Service Creation Detection (T1543)
 - Incident 009 - RDP Logon Monitoring (4624 Type 10)
