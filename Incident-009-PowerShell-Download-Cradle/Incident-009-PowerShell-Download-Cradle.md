@@ -72,7 +72,7 @@ The remote content hosted on example.com was successfully retrieved and displaye
 
 Sysmon Event ID 1 recorded the PowerShell process creation and captured the full command line.
 
-![Evidence 02](images/02-sysmon-powershell-download-cradle.png)
+![02-sysmon-powershell-download-cradle](screenshots/02-sysmon-powershell-download-cradle.png)
 
 ### Result
 
@@ -92,7 +92,7 @@ Key observations:
 
 The Sysmon event was forwarded to Wazuh and generated an alert.
 
-![Evidence 03](images/03-wazuh-powershell-download-cradle-alert.png)
+![03-wazuh-powershell-download-cradle-alert](screenshots/03-wazuh-powershell-download-cradle-alert.png)
 
 ### Alert Information
 
@@ -113,7 +113,7 @@ Wazuh successfully detected suspicious PowerShell activity and generated an aler
 
 The alert details were reviewed to validate the command execution and identify the associated process information.
 
-![Evidence 04](images/04-wazuh-powershell-download-cradle-details.png)
+![04-wazuh-powershell-download-cradle-details](screenshots/04-wazuh-powershell-download-cradle-details.png)
 
 ### Key Findings
 
@@ -133,7 +133,7 @@ Alert investigation confirmed the use of a PowerShell Download Cradle technique 
 
 A high-severity Discord notification was generated from related suspicious activity observed during execution.
 
-![Evidence 05](images/05-discord-powershell-download-cradle-alert.png)
+![05-discord-powershell-download-cradle-alert](screenshots/05-discord-powershell-download-cradle-alert.png)
 
 ### Alert Information
 
