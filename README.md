@@ -206,8 +206,34 @@ Report:
 
 --------------------------------------------------
 
+### Incident 008 – Service Creation Detection
+
+Description:
+
+Simulation of Windows Service creation activity through the installation of a new service using sc.exe.
+
+Skills demonstrated:
+
+- Windows Service monitoring
+- Event ID 7045 investigation
+- Service Control Manager analysis
+- Persistence detection
+- Privilege escalation monitoring
+- Wazuh alert investigation
+- MITRE ATT&CK mapping
+- Threat Hunting
+
+Techniques:
+
+- T1543.003 Create or Modify System Process: Windows Service
+
+Report:
+
+[Incident 008 – Service Creation Detection](./Incident-008-Service-Creation-Detection/Incident-008-Service-Creation-Detection.md)
+
+--------------------------------------------------
+
 ## Future Incident Reports
 
-- Incident 008 - Service Creation Detection (T1543)
 - Incident 009 - RDP Logon Monitoring (4624 Type 10)
 - Incident 010 - PowerShell Download Cradle
