@@ -261,6 +261,29 @@ Report:
 
 --------------------------------------------------
 
-## Future Incident Reports
+## Incident 010 – Nmap Network Service Discovery Detection
 
-- Incident 010 – Nmap Network Scan Detection
+Description:
+
+Simulation of network reconnaissance activity using Nmap to identify exposed services on a Windows Domain Controller.
+
+Skills demonstrated:
+
+- Network reconnaissance detection
+- Nmap analysis
+- Sysmon Event ID 1 investigation
+- Sysmon Event ID 3 investigation
+- Network connection monitoring
+- Service enumeration analysis
+- Wazuh alert investigation
+- MITRE ATT&CK mapping
+- Threat Hunting
+
+Techniques:
+
+- T1046 Network Service Discovery
+- T1021.006 Windows Remote Management
+
+Report:
+
+[Incident-010-Nmap-Network-Service-Discovery-Detection](./Incident-010-Nmap-Network-Service-Discovery-Detection.md)
