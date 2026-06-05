@@ -286,4 +286,4 @@ Techniques:
 
 Report:
 
-[Incident - 010 Nmap-Network Service Discovery Detection](./Incident-010-Nmap-Network-Service-Discovery-Detection.md)
+[Incident-010-Nmap-Network-Service-Discovery-Detection](/Incident-010-Nmap-Network-Service-Discovery-Detection.md)
