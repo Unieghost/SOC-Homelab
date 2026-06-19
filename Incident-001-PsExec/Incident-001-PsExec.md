@@ -332,7 +332,7 @@ Comando usado para simular o ataque:
 PsExec.exe\WIN-LTSC1 cmd
 
 **Captura de tela:**
-![PsExec Execution](screenshots/01-psexec-execution.png)
+![PsExec Execution](screenshots/01-psexec-command.png)
 
 ---
 
