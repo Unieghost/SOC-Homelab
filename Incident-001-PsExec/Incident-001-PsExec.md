@@ -90,7 +90,7 @@ Command used to simulate the attack:
 PsExec.exe \\WIN-LTSC1 cmd
 
 **Evidence Screenshot**
-![PsExec Execution](screenshots/01-psexec-execution.png)
+![PsExec Execution](screenshots/01-psexec-command.png)
 
 ---
 
